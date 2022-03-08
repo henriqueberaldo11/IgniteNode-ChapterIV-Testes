@@ -1,0 +1,16 @@
+{
+  "type": "mssql",
+  "host": "201.39.69.19",
+  "port": 1433,
+  "username": "sa",
+  "password": "Maleta@123",
+  "database": "rentx",  
+  "entities": ["./src/modules/cars/entities/*.ts", "./src/modules/accounts/entities/*.ts"],  
+  "migrations": ["./src/database/migrations/*.ts"],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  },
+  "options": {
+    "encrypt": false
+  }  
+}
