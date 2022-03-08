@@ -1,26 +1,18 @@
-# Chapter II: IgniteNode-Iniciando
+# Chapter III: IgniteNode-Continuando
+
 
 ## :dart: Sobre
 
-Trilha de Node do Ignite - Chapter II: Iniciando a API
+Trilha de Node do Ignite - Chapter III: IgniteNode-Continuando
 ...
-
-## :white_check_mark: Conteúdo
-
-- [x] Typescript
-- [x] Criando a API com NodeJS
-- [x] S.O.L.I.D
-- [x] Trabalhando com Upload
-- [x] Iniciando a documentação
-
 ## :computer: Instalação
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/henriqueberaldo11/IgniteNode-ChapterII-Iniciando.git
+$ git clone https://github.com/henriqueberaldo11/IgniteNode-ChapterIII-Continuando.git
 
 # Entre na pasta
-$ cd IgniteNode-ChapterII-Iniciando
+$ cd IgniteNode-ChapterIII-Continuando
 
 # Instale as dependências
 $ yarn ou yarn install
