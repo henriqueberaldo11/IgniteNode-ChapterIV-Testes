@@ -8,12 +8,15 @@ export class CreateUsers1646415110864 implements MigrationInterface {
         columns: [
           {
             name: "id",
-            type: "uniqueidentifier",
-            default: "newid()",
+            type: "uuid",
             isPrimary: true,
           },
           {
             name: "name",
+            type: "varchar",
+          },
+          {
+            name: "username",
             type: "varchar",
           },
           {
@@ -30,13 +33,13 @@ export class CreateUsers1646415110864 implements MigrationInterface {
           },
           {
             name: "isAdmin",
-            type: "bit",
-            default: 0,
+            type: "boolean",
+            default: false,
           },
           {
             name: "created_at",
-            type: "datetime",
-            default: "getdate()",
+            type: "timestamp",
+            default: "now()",
           },
         ],
       })

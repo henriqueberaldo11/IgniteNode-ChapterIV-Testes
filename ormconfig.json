@@ -1,16 +1,13 @@
 {
-  "type": "mssql",
-  "host": "201.39.69.19",
-  "port": 1433,
-  "username": "sa",
-  "password": "Maleta@123",
-  "database": "rentx",  
-  "entities": ["./src/modules/cars/entities/*.ts", "./src/modules/accounts/entities/*.ts"],  
+  "type": "postgres",
+  "port": 5432,
+  "host": "localhost",
+  "username": "docker",
+  "password": "ignite",
+  "database": "rentx", 
   "migrations": ["./src/database/migrations/*.ts"],
+  "entities": ["./src/modules/**/entities/*.ts"],
   "cli": {
     "migrationsDir": "./src/database/migrations"
-  },
-  "options": {
-    "encrypt": false
-  }  
+  }
 }

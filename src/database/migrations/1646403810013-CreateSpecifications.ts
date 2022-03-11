@@ -8,8 +8,7 @@ export class CreateSpecifications1646403810013 implements MigrationInterface {
         columns: [
           {
             name: "id",
-            type: "uniqueidentifier",
-            default: "newid()",
+            type: "uuid",
             isPrimary: true,
           },
           {
@@ -22,8 +21,8 @@ export class CreateSpecifications1646403810013 implements MigrationInterface {
           },
           {
             name: "created_at",
-            type: "datetime",
-            default: "getdate()",
+            type: "timestamp",
+            default: "now()",
           },
         ],
       })

@@ -8,8 +8,7 @@ export class CreateCategories1646332359481 implements MigrationInterface {
         columns: [
           {
             name: "id",
-            type: "uniqueidentifier",
-            default: "newid()",
+            type: "uuid",
             isPrimary: true,
           },
           {
@@ -22,8 +21,8 @@ export class CreateCategories1646332359481 implements MigrationInterface {
           },
           {
             name: "created_at",
-            type: "datetime",
-            default: "getdate()",
+            type: "timestamp",
+            default: "now()",
           },
         ],
       })
