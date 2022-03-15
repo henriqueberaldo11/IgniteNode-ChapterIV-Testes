@@ -7,7 +7,12 @@
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
     "rund": "docker run -p 3333:3333 rentx",
-    "baixarEcriarImagem": "docker build -t rentx ."
+    "baixarEcriarImagem": "docker build -t rentx .",
+    "dcUp": "docker-compose up",
+    "dcDown": "docker-compose down",
+    "dcStart": "docker-compose start",
+    "dcStop": "docker-compose stop",
+    "verIp": "docker exec database_ignite cat /etc/hosts"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",

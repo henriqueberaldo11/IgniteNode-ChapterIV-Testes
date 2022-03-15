@@ -13,8 +13,7 @@ services:
       - POSTGRES_DB=rentx
     volumes:
       - pgdata:/data/postgres
-    networks:
-      - typeorm
+    network_mode: host
 
   app:
     build: .
@@ -25,17 +24,12 @@ services:
       - 9229:9229 #Você pode inserir essa porta tbm pra poder usar o debug
     volumes:
       - .:/usr/app
+    network_mode: host      
     links:
       - database
     depends_on:
       - database
-    networks:
-      - typeorm
 
 volumes:
   pgdata:
     driver: local
-
-networks:
-  - typeorm
-    driver: bridge
