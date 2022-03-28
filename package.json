@@ -4,15 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
-    "rund": "docker run -p 3333:3333 rentx",
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
+    "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
+    "rund": "sudo docker run -p 3333:3333 rentx",
     "baixarEcriarImagem": "docker build -t rentx .",
-    "dcUp": "docker-compose up",
-    "dcDown": "docker-compose down",
-    "dcStart": "docker-compose start",
-    "dcStop": "docker-compose stop",
-    "verIp": "docker exec database_ignite cat /etc/hosts"
+    "dcUp": "sudo docker-compose up",
+    "dcDown": "sudo docker-compose down",
+    "dcStart": "sudo docker-compose start",
+    "dcStop": "sudo docker-compose stop",
+    "verIp": "sudo docker exec database_ignite cat /etc/hosts",
+    "verApp": "sudo docker logs rentx -f",
+    "test": "jest"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -31,6 +33,7 @@
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.11",
+    "@types/jest": "^27.4.1",
     "@types/jsonwebtoken": "^8.5.8",
     "@types/multer": "^1.4.5",
     "@types/swagger-ui-express": "^4.1.2",
@@ -44,8 +47,11 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-import-helpers": "^1.1.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^27.5.1",
     "prettier": "^2.2.1",
+    "ts-jest": "^27.1.4",
     "ts-node-dev": "^1.1.6",
+    "tsconfig-paths": "^3.14.1",
     "typescript": "^4.2.3"
   }
 }
