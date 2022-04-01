@@ -7,13 +7,15 @@
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
     "rund": "sudo docker run -p 3333:3333 rentx",
-    "baixarEcriarImagem": "docker build -t rentx .",
+    "baixarEcriarImagem": "sudo docker build -t rentx .",
     "dcUp": "sudo docker-compose up",
     "dcDown": "sudo docker-compose down",
     "dcStart": "sudo docker-compose start",
     "dcStop": "sudo docker-compose stop",
     "verIp": "sudo docker exec database_ignite cat /etc/hosts",
     "verApp": "sudo docker logs rentx -f",
+    "dcRecriar": "sudo docker-compose up -d --force-recreate",
+    "dList": "sudo docker ps -a",
     "test": "jest"
   },
   "dependencies": {
